@@ -5,26 +5,6 @@ const userSchema = new mongoose.Schema({
     type: String,
     required: true,
   },
-  log: [
-    {
-      description: {
-        type: String,
-        required: true,
-      },
-      duration: {
-        type: Number,
-        required: true,
-      },
-      date: {
-        type: Date,
-        default: () => new Date.now(),
-      },
-    },
-  ],
-  count: {
-    type: Number,
-    default: 0,
-  },
 });
 
 const User = mongoose.model("User", userSchema);
